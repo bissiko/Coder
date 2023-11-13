@@ -1,0 +1,28 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(…Şˆø8¡”ïÉ¼1
+e
+java:S1192"HDefine a constant instead of duplicating this literal "DECRYPT" 3 times.(ß­ÖÕ8¡”ïÉ¼1
+n
+java:S1192"LDefine a constant instead of duplicating this literal "BRUTE_FORCE" 3 times.(¸Ñ›§şÿÿÿÿ8¡”ïÉ¼1
+j
+java:S1192"HDefine a constant instead of duplicating this literal "ENCRYPT" 3 times.(€œåÂıÿÿÿÿ8¡”ïÉ¼1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(…Şˆø8°”ïÉ¼1
+G	java:S106"+Replace this use of System.out by a logger.(¸‰òÈ8±”ïÉ¼1
+D
+java:S1125"'Remove the unnecessary boolean literal.(Œğ­÷8³”ïÉ¼1
+F	java:S106"+Replace this use of System.out by a logger.(ç‡Œ[8´”ïÉ¼1
+L	java:S106""+Replace this use of System.out by a logger.(ÄÃüşÿÿÿÿ8´”ïÉ¼1
+D
+java:S1125$"'Remove the unnecessary boolean literal.(Œğ­÷8´”ïÉ¼1
+L	java:S106("+Replace this use of System.out by a logger.(¸Õ·úÿÿÿÿ8µ”ïÉ¼1
+L	java:S106-"+Replace this use of System.out by a logger.(öòÑÈùÿÿÿÿ8µ”ïÉ¼1
+L	java:S1063"+Replace this use of System.out by a logger.(ÎÃ÷¡úÿÿÿÿ8µ”ïÉ¼1
+G	java:S1065"+Replace this use of System.out by a logger.(á¯Ş³8¶”ïÉ¼1
+D
+java:S11258"'Remove the unnecessary boolean literal.(Œğ­÷8¶”ïÉ¼1
+F
+java:S19409")Use the opposite operator ("<=") instead.(’…‹¤8¶”ïÉ¼1
+G	java:S106;"+Replace this use of System.out by a logger.(àÂ†«8ÉñîÏ¼1
+L	java:S106B"+Replace this use of System.out by a logger.(›Ìùÿÿÿÿÿ8‰‰ïÏ¼1
+L	java:S106E"+Replace this use of System.out by a logger.(—Ù¦–øÿÿÿÿ8ÎòğÏ¼1

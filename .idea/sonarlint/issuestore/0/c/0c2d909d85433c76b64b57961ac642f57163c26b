@@ -1,0 +1,8 @@
+
+z
+java:S1488"]Immediately return this expression instead of assigning it to the temporary variable "lines".(úŒ´ª8£ˆ«›¼1
+
+java:S1130
+"qRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from constructor's body.(Øø†ì8§ˆ«›¼1
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8¨ˆ«›¼1

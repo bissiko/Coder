@@ -1,0 +1,22 @@
+
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(®üÿİúÿÿÿÿ8¶şÊ¼1
+8
+java:S3626#"Remove this redundant jump.(ûÁİ…8¶şÊ¼1
+8
+java:S3626+"Remove this redundant jump.(ûÁİ…8¶şÊ¼1
+8
+java:S3626."Remove this redundant jump.(ûÁİ…8¶şÊ¼1
+8
+java:S36264"Remove this redundant jump.(ûÁİ…8¶şÊ¼1
+>
+java:S1659"!Declare "src" on a separate line.(ÀûÊØ8¶şÊ¼1
+X	java:S125"<This block of commented-out lines of code should be removed.(áµıÉ8¸şÊ¼1
+L	java:S106"+Replace this use of System.out by a logger.(›Ìùÿÿÿÿÿ8¸şÊ¼1
+]	java:S125"<This block of commented-out lines of code should be removed.(ê±¤Øıÿÿÿÿ8¸şÊ¼1
+L	java:S106"+Replace this use of System.out by a logger.(—Ù¦–øÿÿÿÿ8¸şÊ¼1
+L	java:S106""+Replace this use of System.out by a logger.(ë¤…•ıÿÿÿÿ8¹şÊ¼1
+L	java:S106("+Replace this use of System.out by a logger.(ÎÃ÷¡úÿÿÿÿ8¹‹‘Ê¼1
+L	java:S106*"+Replace this use of System.out by a logger.(¦ÈõÚøÿÿÿÿ8Ê·õÏ¼1
+L	java:S1061"+Replace this use of System.out by a logger.(¸Õ·úÿÿÿÿ8§§÷Ï¼1
+L	java:S1063"+Replace this use of System.out by a logger.(îä´öıÿÿÿÿ8Â–øÏ¼1

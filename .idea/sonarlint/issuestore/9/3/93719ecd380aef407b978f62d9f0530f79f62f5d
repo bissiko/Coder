@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ú×Âæÿÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(ËÌß³úÿÿÿÿ8‡—×Ê¼1
+]	java:S125$"<This block of commented-out lines of code should be removed.(¹µ´ýÿÿÿÿ8ÝÊ·š¼1
+p
+java:S1128"NRemove this unused import 'serhii.ost.coder.constants.Constants.ENCRYPT_Mark'.(ä—û¬þÿÿÿÿ8Š—×Ê¼1

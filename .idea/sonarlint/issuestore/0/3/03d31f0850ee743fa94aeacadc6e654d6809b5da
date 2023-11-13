@@ -1,0 +1,14 @@
+
+Š
+java:S1319	"hThe type of "CHARS_UA" should be an interface such as "List" rather than the implementation "ArrayList".(«´¾÷úÿÿÿÿ8×…Ë¼1
+…
+java:S1319"hThe type of "CHARS_EN" should be an interface such as "List" rather than the implementation "ArrayList".(ÔéÁ×8×…Ë¼1
+{	java:S115 "ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¼•˜¬øÿÿÿÿ8Ø…Ë¼1
+{	java:S115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(­Ø‹·ûÿÿÿÿ8Ø…Ë¼1
+?
+java:S2386	"Make this member "protected".(«´¾÷úÿÿÿÿ8ñÖ¬Ë¼1
+:
+java:S2386"Make this member "protected".(ÔéÁ×8Ú…Ë¼1
+\
+java:S1118":Add a private constructor to hide the implicit public one.(“³±ûÿÿÿÿ8Û…Ë¼1
+]	java:S125"<This block of commented-out lines of code should be removed.(»˜‘õÿÿÿÿÿ8Û…Ë¼1
