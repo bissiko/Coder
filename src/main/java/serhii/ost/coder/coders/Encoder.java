@@ -1,4 +1,4 @@
-package serhii.ost.coder.Coders;
+package serhii.ost.coder.coders;
 
 import serhii.ost.coder.languages.LangDetect;
 import serhii.ost.coder.readwritefile.RenameFile;
@@ -22,7 +22,7 @@ public class Encoder {
 
         for (int i = 0; i < src.size(); i++) {
             char[] chars = src.get(i).toCharArray();
-            System.out.println(new String(chars));
+            //System.out.println(new String(chars));
 
             for (int j = 0; j < chars.length; j++) {
                 char ch = chars[j];

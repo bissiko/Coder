@@ -1,4 +1,4 @@
-package serhii.ost.coder.Coders;
+package serhii.ost.coder.coders;
 
 import serhii.ost.coder.languages.LangDetect;
 import serhii.ost.coder.readwritefile.RenameFile;
@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static serhii.ost.coder.constants.Constants.DECRYPT_Mark;
-import static serhii.ost.coder.constants.Constants.ENCRYPT_Mark;
 
 public class Decoder {
     public List<String> decodingFile (List<String> src, int key) {
@@ -33,7 +32,6 @@ public class Decoder {
             }
             decodedText.add(new String(chars));
         }
-        //System.out.println(decodedText.toString());
         return decodedText;
     }
     public void writeDecodedFile (List<String> lines, String src, int key) throws IOException {

@@ -1,7 +1,8 @@
 package serhii.ost.coder.startparams;
 
-import serhii.ost.coder.Coders.Decoder;
-import serhii.ost.coder.Coders.Encoder;
+import serhii.ost.coder.coders.Brute;
+import serhii.ost.coder.coders.Decoder;
+import serhii.ost.coder.coders.Encoder;
 import serhii.ost.coder.readwritefile.ReadFile;
 
 import java.nio.file.Path;
@@ -16,7 +17,7 @@ public class StartCli {
         System.out.println("Enter command: ENCRYPT, DECRYPT or BRUTE_FORCE");
         Scanner s = new Scanner(System.in);
         boolean flag = true;
-        while (flag == true) {
+        while (flag) {
             String nameCommand = s.nextLine();
             if (nameCommand.equalsIgnoreCase("ENCRYPT")) {
                 command = "ENCRYPT";
@@ -33,34 +34,24 @@ public class StartCli {
         }
         System.out.println("Enter absolute Path of File!");
         flag = true;
-        while (flag == true) {
+        while (flag) {
             src = s.nextLine();
             if (!Path.of(src).isAbsolute()) {
-                flag = false;
                 System.out.println("Path is not absolute!");
             } else {
                 flag = false;
+                System.out.println("Path is OK!");
             }
         }
-        System.out.println("Path is OK!");
         ReadFile file = new ReadFile(src);
         List<String> lines = file.readSourceFile(src);
 
         if (command.equalsIgnoreCase("BRUTE_FORCE")) {
-
-            System.out.println("File is analysyred!");
+            new Brute().writeBruteDecodedFile(lines, src);
+            System.out.println("File is analysed!");
         } else {
-            System.out.println("Enter Number for Coding of File!");
-            key = s.nextInt();
-            flag = true;
-            while (flag == true) {
-                if (!(key > 0)) {
-                    flag = false;
-                    System.out.println("Number must be greater 0!");
-                } else {
-                    flag = false;
-                }
-            }
+            System.out.println("Enter Key for Coding of File!");
+            key = getKey ();
             if (command.equalsIgnoreCase("ENCRYPT")) {
                 new Encoder().writeEncodedFile(lines, src, key);
                 System.out.println("File is encrypted!");
@@ -69,5 +60,19 @@ public class StartCli {
                 System.out.println("File is decrypted!");
             }
         }
+    }
+    public int getKey () {
+        int key = 0;
+        Scanner s = new Scanner(System.in);
+        boolean flag = true;
+        while (flag) {
+            key = s.nextInt();
+            if ((key <= 0)) {
+                System.out.println("Key must be greater 0!");
+            } else {
+                flag = false;
+            }
+        }
+        return key;
     }
 }

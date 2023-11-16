@@ -2,8 +2,6 @@ package serhii.ost.coder.constants;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-//import java.util.Character;
-//import java.lang.reflect.Array;
 
 public class Constants {
     public static final ArrayList<Character> CHARS_UA = new ArrayList<>(
