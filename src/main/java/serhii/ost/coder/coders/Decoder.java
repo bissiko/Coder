@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-import static serhii.ost.coder.constants.Constants.DECRYPT_Mark;
+import static serhii.ost.coder.constants.Constants.DECRYPT_MARK;
 
 public class Decoder {
     public List<String> decodingFile (List<String> src, int key) {
@@ -21,7 +21,6 @@ public class Decoder {
 
         for (int i = 0; i < src.size(); i++) {
             char[] chars = src.get(i).toCharArray();
-            //System.out.println(new String(chars));
 
             for (int j = 0; j < chars.length; j++) {
                 char ch = chars[j];
@@ -39,7 +38,7 @@ public class Decoder {
         List<String> decodedText = decoding.decodingFile(lines, key);
 
         RenameFile desPathName = new RenameFile();
-        Path desPathDecode = desPathName.setDesPath(src, DECRYPT_Mark);
+        Path desPathDecode = desPathName.setDesPath(src, DECRYPT_MARK);
 
         WriteFile fileCoded = new WriteFile();
         fileCoded.writeDesPath(desPathDecode, decodedText);

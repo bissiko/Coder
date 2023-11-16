@@ -27,6 +27,9 @@ public class Constants {
                     '.', ',', '«', '»', '"', '\'', ':', '!', '?', ' ', '-'
             )
     );
-    public static final String ENCRYPT_Mark = "[ENCRYPTED]";
-    public static final String DECRYPT_Mark = "[DECRYPTED]";
+    public static final String ENCRYPT_MARK = "[ENCRYPTED]";
+    public static final String DECRYPT_MARK = "[DECRYPTED]";
+    public static final String ENCRYPT = "ENCRYPT";
+    public static final String DECRYPT = "DECRYPT";
+    public static final String BRUTE = "BRUTE_FORCE";
 }

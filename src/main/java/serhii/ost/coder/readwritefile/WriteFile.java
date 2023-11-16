@@ -12,7 +12,7 @@ public class WriteFile {
         if (Files.exists(desPath)) {
             Files.delete(desPath);
         }
-        Path destFile = Files.createFile(desPath);
+        Files.createFile(desPath);
         try (FileOutputStream fileOutputStream = new FileOutputStream(String.valueOf(desPath), true)) {
             for (String s: lines) {
                 fileOutputStream.write((s + "\n").getBytes());

@@ -9,9 +9,13 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
+import static serhii.ost.coder.constants.Constants.*;
+
 public class Starter {
+    // run with arguments
     public boolean starter(String[] args) throws IOException {
-        String command, src;
+        String command;
+        String src;
         int key;
         if (args.length >= 2) {
             command = args[0];
@@ -25,27 +29,28 @@ public class Starter {
             if (args.length == 3) {
                 key = Integer.parseInt(args[2]);
 
-                if (command.equalsIgnoreCase("ENCRYPT")) {
-                    //Encoder encoding = new Encoder();
+                if (command.equalsIgnoreCase(ENCRYPT)) {
+                    //Encode file
                     new Encoder().writeEncodedFile(lines, src, key);
                     System.out.println("File is encrypted!");
                     return true;
-                } else if (command.equalsIgnoreCase("DECRYPT")) {
-                    //Decoder decoding = new Decoder();
+                } else if (command.equalsIgnoreCase(DECRYPT)) {
+                    //Decode file
                     new Decoder().writeDecodedFile(lines, src, key);
                     System.out.println("File is decrypted!");
                     return true;
                 } else {
-                    System.out.println("Command is not accepted! Must be ENCRYPT or DECRYPT");
+                    System.out.println("Command is not accepted! Must be " + ENCRYPT + " or " + DECRYPT);
                     return false;
                 }
             } else if (args.length == 2) {
-                if (command.equalsIgnoreCase("BRUTE_FORCE")) {
+                if (command.equalsIgnoreCase(BRUTE)) {
+                    // File BRUTE decoding
                     new Brute().writeBruteDecodedFile(lines, src);
                     System.out.println("File is analysed!");
                     return true;
                 } else {
-                    System.out.println("Command is not accepted! Must be BRUTE_FORCE");
+                    System.out.println("Command is not accepted! Must be " + BRUTE);
                     return false;
                 }
             }

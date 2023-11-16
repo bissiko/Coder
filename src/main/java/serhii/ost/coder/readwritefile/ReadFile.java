@@ -1,23 +1,25 @@
 package serhii.ost.coder.readwritefile;
 
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collections;
 import java.util.List;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import java.io.IOException;
 
 public class ReadFile {
-    public ReadFile(String srcFile) throws IOException {
+    public ReadFile(String srcFile) {
         this.srcFile = srcFile;
     }
 
     String srcFile;
 
     public List<String> readSourceFile(String srcFile) throws IOException {
-        if (!Files.exists(Paths.get(srcFile))) {
-            return null;
+        Path path = Paths.get(srcFile);
+        if (!Files.exists(path)) {
+            return Collections.emptyList();
         }
-        List<String> lines = Files.readAllLines(Paths.get(srcFile), UTF_8);
-        return lines;
+        return Files.readAllLines(path, UTF_8);
     }
 }

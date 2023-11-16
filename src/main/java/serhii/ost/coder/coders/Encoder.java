@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-import static serhii.ost.coder.constants.Constants.ENCRYPT_Mark;
+import static serhii.ost.coder.constants.Constants.ENCRYPT_MARK;
 
 public class Encoder {
 
@@ -22,7 +22,6 @@ public class Encoder {
 
         for (int i = 0; i < src.size(); i++) {
             char[] chars = src.get(i).toCharArray();
-            //System.out.println(new String(chars));
 
             for (int j = 0; j < chars.length; j++) {
                 char ch = chars[j];
@@ -36,13 +35,13 @@ public class Encoder {
         return encodedText;
     }
     public void writeEncodedFile (List<String> lines, String src, int key) throws IOException {
-        RenameFile desPathName = new RenameFile();
-        WriteFile fileCoded = new WriteFile();
-
         Encoder encoding = new Encoder();
         List<String> encodedText = encoding.encodingFile(lines, key);
 
-        Path desPath = desPathName.setDesPath(src, ENCRYPT_Mark);
+        RenameFile desPathName = new RenameFile();
+        Path desPath = desPathName.setDesPath(src, ENCRYPT_MARK);
+
+        WriteFile fileCoded = new WriteFile();
         fileCoded.writeDesPath(desPath, encodedText);
 
     }

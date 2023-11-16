@@ -5,27 +5,31 @@ import serhii.ost.coder.coders.Decoder;
 import serhii.ost.coder.coders.Encoder;
 import serhii.ost.coder.readwritefile.ReadFile;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Scanner;
 
+import static serhii.ost.coder.constants.Constants.*;
+
+// Run with client dialog
 public class StartCli {
-    public void startCli() throws Exception {
+    public void startCli() throws IOException {
         String command = "";
         String src = null;
         int key;
-        System.out.println("Enter command: ENCRYPT, DECRYPT or BRUTE_FORCE");
+        System.out.printf("Enter command: $s1, $s2 or $s3", ENCRYPT, DECRYPT, BRUTE);
         Scanner s = new Scanner(System.in);
         boolean flag = true;
         while (flag) {
             String nameCommand = s.nextLine();
-            if (nameCommand.equalsIgnoreCase("ENCRYPT")) {
+            if (nameCommand.equalsIgnoreCase(ENCRYPT)) {
                 command = "ENCRYPT";
                 flag = false;
-            } else if (nameCommand.equalsIgnoreCase("DECRYPT")) {
+            } else if (nameCommand.equalsIgnoreCase(DECRYPT)) {
                 command = "DECRYPT";
                 flag = false;
-            } else if (nameCommand.equalsIgnoreCase("BRUTE_FORCE")) {
+            } else if (nameCommand.equalsIgnoreCase(BRUTE)) {
                 command = "BRUTE_FORCE";
                 flag = false;
             } else {
@@ -51,17 +55,17 @@ public class StartCli {
             System.out.println("File is analysed!");
         } else {
             System.out.println("Enter Key for Coding of File!");
-            key = getKey ();
-            if (command.equalsIgnoreCase("ENCRYPT")) {
+            key = getKey();
+            if (command.equalsIgnoreCase(ENCRYPT)) {
                 new Encoder().writeEncodedFile(lines, src, key);
                 System.out.println("File is encrypted!");
-            } else if (command.equalsIgnoreCase("DECRYPT")) {
+            } else if (command.equalsIgnoreCase(DECRYPT)) {
                 new Decoder().writeDecodedFile(lines, src, key);
                 System.out.println("File is decrypted!");
             }
         }
     }
-    public int getKey () {
+    public int getKey () { // Read the Key
         int key = 0;
         Scanner s = new Scanner(System.in);
         boolean flag = true;
